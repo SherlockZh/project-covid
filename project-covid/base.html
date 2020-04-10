@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <meta charset="utf-8"> 
+    <link rel="stylesheet" type="text/css" href="project.css">
+</head>
+  <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4/stitch.js"></script>
+  <script src="dbFunctions.js"></script>
+</head>
+
+
+<body>
+
+<div class="container-fluid">
+    <div class="Title">
+        <div class="text-center">
+            Disease Distribution Map
+        </div>
+        <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="1280" height="960"  src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=630d5fe9-b61d-408e-ac9c-1c7322967c03&autorefresh=60&theme=light"></iframe>
+    </div>
+    <div class="flex-container">
+            <div>
+                <a href="uschart.html">Charts</a>
+            </div>
+            
+            <div>
+                <a href="News.html">News</a>
+            </div>
+            <div>
+                <a href="Rumors.html">Rumors</a>
+            </div>
+    </div>
+    <div class="row-fluid">
+        <div class="span2">
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=7951b4c0-dc6b-4421-a46a-171d03087660&autorefresh=60&theme=light"></iframe>
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=64cee43e-9930-499e-a50b-bb06f67d3889&autorefresh=60&theme=light"></iframe>
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=61c41ff2-9d61-4418-a872-fd3d20846507&autorefresh=60&theme=light"></iframe>
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=73a7dfc5-323b-489f-96bd-5e8f7e003d26&autorefresh=60&theme=light"></iframe>
+            <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=630d5fe9-b61d-408e-ac9c-1c7322967c03&autorefresh=60&theme=light"></iframe>
+        
+        </div>
+    </div>
+</div>
+
+
+    <div class="row-fluid">
+        <div class="span5">
+           <div class="mydiv">
+               <fieldset>
+                    <legend><span>Update a country</span></legend>
+                    <p>
+                        <br/> <span>Country Name</span><br />
+                        <input id = "updateCountry" type="text"><br>
+                    </p>
+                    <p>
+                        <span>Confirmed Cases</span><br/>
+                        <input id = "updateConfirmedCount" type="text"><br>
+                        <input type="submit" onClick="updateConfirm()" class="mydiv">
+                    </p>
+                    <p>
+                        <span>Death Cases:</span><br />
+                        <input id = "deadCount" type="text"><br>
+                        <input type="submit" onClick="updateDeath()" class="mydiv">
+                    </p>
+                </fieldset>
+           </div>
+        </div>
+    </div>
+   <div class="row-fluid">
+        <div class="span3">
+            <div class="mydiv" onsubmit="return false">
+                <fieldset>
+                    <legend><span>Add a country</span></legend>
+                    <p>
+                        <br /> <span>Country Name</span><br />
+                        <input type="text" id="countryEnglishName" name="countryEnglishName">
+                    </p>
+                    <p>
+                        <span>Confirmed Cases</span><br />
+                        <input type="text" id="addConfirmedCount" name="addConfirmedCount"><br />
+                        <input type="submit" onClick="addData()" class="mydiv">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+    <div class="row-fluid">
+        <div class="span4">
+            <div class="mydiv" onsubmit="return false">
+                <fieldset>
+                    <legend><span>Delete a country</span></legend>
+                    <p>
+                        <br /> <span>Country Name</span><br />
+                       <input id = "removeCountry" type="text"><br>
+                       <input type="submit" onClick="removeData()" class="mydiv">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </div>
+
+     
+    
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>US-chart</title>
+    <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">  
+    <link rel="stylesheet" type="text/css" href="project.css">
+      <script src="https://s3.amazonaws.com/stitch-sdks/js/bundles/4/stitch.js"></script>
+      <script src="dbFunctions.js"></script>
+</head>
+<body>
+    <form action="base.html">
+        <input type="submit" value="back" />
+    </form>
+    <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=f8d5917e-4858-4124-8c83-401388d1e700&autorefresh=10&theme=light"></iframe>
+
+    <div class="US1">
+        <br/><select id="getStateConfirm">
+          <option>New York</option>
+          <option>New Jersey</option>
+          <option>Michigan</option>
+          <option>California</option>
+          <option>Pennsylvania</option>
+          <option>Louisiana</option>
+          <option>Massachusetts</option>
+          <option>Florida</option>
+          <option>Illinois</option>
+          <option>Texas</option>
+          <option>Georgia</option>
+          <option>Connecticut</option>
+          <option>Washington</option>
+        </select>
+        <br><p>
+            <span>Confirmed Cases</span><br/>
+            <input id = "USupdateConfirmedCount" type="text"><br>
+            <input type="submit" onClick="updateUSConfirm()" class="mydiv">
+        </p>
+
+    </div>
+    
+   <iframe style="background: #FFFFFF;border: none;border-radius: 2px;box-shadow: 0 2px 10px 0 rgba(70, 76, 79, .2);" width="640" height="480" src="https://charts.mongodb.com/charts-project-0-eonpr/embed/charts?id=354d3fbb-d351-4b57-9681-c56162b382c0&autorefresh=10&theme=light"></iframe>
+
+    <div class="US2">
+        <br/><select id="getStateDeath">
+          <option>New York</option>
+          <option>New Jersey</option>
+          <option>Michigan</option>
+          <option>California</option>
+          <option>Pennsylvania</option>
+          <option>Louisiana</option>
+          <option>Massachusetts</option>
+          <option>Florida</option>
+          <option>Illinois</option>
+          <option>Texas</option>
+          <option>Georgia</option>
+          <option>Connecticut</option>
+          <option>Washington</option>
+        </select>
+        <br><p>
+            <span>Death Cases</span><br/>
+            <input id = "USupdateDeathCount" type="text"><br>
+            <input type="submit" onClick="updateUSDeath()" class="mydiv">
+        </p>
+    </div>
+    
+</body>
+</html>
